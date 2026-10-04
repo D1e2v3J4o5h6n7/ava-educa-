@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVA-EDUCA+ | Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-small">AVA-EDUCA+</div>
+    <div id="userName" class="user-name">Usuário</div>
+  </header>
+
+  <div class="top-divider" aria-hidden="true"></div>
+
+  <div class="app-layout">
+    <aside class="sidebar">
+      <nav aria-label="Menu principal">
+        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+        <button class="nav-link disabled" type="button" disabled>Cursos</button>
+        <a class="nav-link" href="../cadastro-aluno/cadastro-aluno.html">Cadastro de Alunos</a>
+        <button id="logout" class="nav-link logout" type="button">Sair</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="dashboard-intro">
+        <h1>Dashboard</h1>
+        <p>Confira os cursos vinculados ao usuário logado.</p>
+      </section>
+
+      <section class="courses-section">
+        <h2>Meus cursos</h2>
+        <p>Lista de cursos associados ao usuário.</p>
+        <p id="dashboardFeedback" class="feedback" hidden></p>
+        <div id="courseList" class="course-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

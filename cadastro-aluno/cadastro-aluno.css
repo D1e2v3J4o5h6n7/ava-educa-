@@ -1,0 +1,41 @@
+/* Estilos exclusivos do Cadastro de Aluno */
+
+.student-form {
+  padding: 20px;
+  background: #ffffff95;
+  border: 1px solid #dfe3e8;
+  border-radius: 5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.student-form .btn {
+  min-width: 130px;
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .student-form .btn {
+    width: 100%;
+  }
+}

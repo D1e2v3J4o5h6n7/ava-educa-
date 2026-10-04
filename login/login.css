@@ -1,0 +1,53 @@
+/* Estilos exclusivos da tela de Login */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #f5f6f8;
+}
+
+.login-card {
+  width: min(100%, 380px);
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 5px;
+}
+
+.brand {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.brand h1 {
+  margin: 0 0 6px;
+  color: #25364a;
+  font-size: 24px;
+}
+
+.brand p {
+  margin: 0;
+  color: #6b737c;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.link-button {
+  display: block;
+  margin: 14px auto 0;
+  border: 0;
+  background: transparent;
+  color: #315d8f;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 22px;
+  }
+}

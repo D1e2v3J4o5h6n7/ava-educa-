@@ -1,0 +1,210 @@
+ /* Estilos gerais do AVA-EDUCA+
+    Regras compartilhadas entre Dashboard e Cadastro de Alunos.
+ */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dcdee2;
+  color: #282d34;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+label {
+  display: block;
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 11px;
+  border: 1px solid #cfd4da;
+  border-radius: 5px;
+  background: #fff;
+  color: #20252b;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #dce7f7;
+  border-color: #3b6ea8;
+}
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #3b6ea8;
+  color: #f8f5f5;
+}
+
+.btn-primary:hover {
+  background: #4f7aac;
+}
+
+.feedback {
+  margin: 14px 0;
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+
+.feedback.error {
+  background: #fbecec;
+  color: #a32d2d;
+}
+
+.feedback.success {
+  background: #eaf6ed;
+  color: #28643a;
+}
+
+/* Cabeçalho compartilhado */
+.topbar {
+  min-height: 60px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #1c56cb;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.brand-small {
+  display: block;
+  color: #f5f6f8;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-name {
+  display: block;
+  color: #f9fafb;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Estrutura comum das páginas internas */
+.app-layout {
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: 190px 1fr;
+}
+
+.sidebar {
+  padding: 18px 12px;
+  background: #dee1e3;
+  border-right: 1px solid #dfe2e5;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 4px;
+}
+
+.nav-link {
+  width: 100%;
+  padding: 10px 11px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #2c3239;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #1c56cb;
+  border-color: #3890e9;
+  color: #f9f4f4;
+}
+
+.nav-link.disabled {
+  color: #8b949e;
+  cursor: not-allowed;
+}
+
+.nav-link.logout {
+  margin-top: 12px;
+  color: #f90505c7;
+}
+
+.content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px;
+}
+
+.page-heading {
+  margin-bottom: 18px;
+}
+
+.page-heading h1 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+
+.page-heading p {
+  margin: 0;
+  color: #636b75;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 8px 12px;
+    border-right: 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .sidebar nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-small {
+    font-size: 17px;
+  }
+
+  .user-name {
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .sidebar nav {
+    grid-template-columns: 1fr;
+  }
+}
