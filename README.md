@@ -43,7 +43,7 @@ O projeto utiliza módulos JavaScript (`import`/`export`) e deve ser executado p
 Abra o terminal dentro da pasta do projeto e execute:
 
 ```bash
-python -m http.server 5500
+python3 -m http.server 5500
 ```
 
 Depois acesse:
@@ -97,8 +97,7 @@ ava-educa/
 │   └── listagem-alunos.js
 │
 ├── assets/
-│   ├── images/
-│   └── icons/
+│  └── icons/
 │       └── favicon.svg
 │
 ├── index.html
@@ -146,10 +145,7 @@ Exemplos de branches de funcionalidade:
 
 feature/login
 feature/dashboard
-feature/cadastro-aluno
-feature/responsividade
 feature/readme
-feature/testes-final
 
 ## Kanban
 
